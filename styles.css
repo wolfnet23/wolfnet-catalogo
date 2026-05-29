@@ -26,7 +26,7 @@ body {
     width: 40%;
     max-width: 800px;
     display: block;
-    margin: 100px auto 0 auto; /* <-- centrado y bajado */
+    margin: 10px auto 0 auto; /* <-- centrado y bajado */
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
 }
 
@@ -43,7 +43,7 @@ body {
 
 /* Imagen del hombre */
 .left-image {
-    width: 60%;
+    width: 80%;
     max-width: 480px;
 }
 
