@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Planes – Wolfnet IPTV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="back">← Volver</a>
+</header>
+
+<div class="planes-container">
+    <h1 id="titulo-servicio"></h1>
+    <p class="sub">Elige el plan que prefieras</p>
+
+    <table class="tabla-planes">
+        <tr><th>Duración</th><th>Precio</th><th>Acción</th></tr>
+
+        <tr>
+            <td>1 mes</td><td>6€</td>
+            <td><button class="btn-wsp" onclick="comprar(6,1)">Comprar</button></td>
+        </tr>
+
+        <tr>
+            <td>3 meses</td><td>16€</td>
+            <td><button class="btn-wsp" onclick="comprar(16,3)">Comprar</button></td>
+        </tr>
+
+        <tr>
+            <td>6 meses</td><td>30€</td>
+            <td><button class="btn-wsp" onclick="comprar(30,6)">Comprar</button></td>
+        </tr>
+
+        <tr>
+            <td>12 meses</td><td>55€</td>
+            <td><button class="btn-wsp" onclick="comprar(55,12)">Comprar</button></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
