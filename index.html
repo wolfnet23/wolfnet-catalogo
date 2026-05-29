@@ -5,39 +5,134 @@
     <title>WOLFNET – Inicio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+
+    <style>
+        /* ===== FONDO GENERAL ===== */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('fondo-binario.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Oscurecer y mejorar lectura */
+        .overlay {
+            background: rgba(0,0,0,0.65);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            z-index: -1;
+        }
+
+        /* ===== FRANJA SUPERIOR ===== */
+        .top-bar {
+            width: 100%;
+            height: 80px;
+            background: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 30px;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        /* ===== CONTENIDO PRINCIPAL ===== */
+        .main-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+            gap: 40px;
+        }
+
+        .left-image {
+            width: 40%;
+            max-width: 480px;
+        }
+
+        /* ===== TEXTO DE BIENVENIDA ===== */
+        .typing-container {
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+            max-width: 700px;
+            line-height: 1.4;
+            text-shadow: 0 0 8px rgba(0,0,0,0.8);
+            min-height: 200px;
+        }
+
+        .cursor {
+            display: inline-block;
+            margin-left: 4px;
+            color: #00ff7f;
+            font-weight: 900;
+            font-size: 36px;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* ===== BOTONES ===== */
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            background: #00ff7f;
+            padding: 14px 22px;
+            border-radius: 10px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #00e676;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="header">
-    <img src="logo.png" class="logo-img" alt="WOLFNET">
-</header>
+<div class="overlay"></div>
 
-<section class="hero">
-    <div class="typing-container">
-        <span id="typing-text"></span>
-        <span class="cursor">|</span>
+<!-- FRANJA SUPERIOR -->
+<div class="top-bar">
+    <img src="logo.png" class="logo" alt="WOLFNET">
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="main-container">
+
+    <!-- IMAGEN DEL HOMBRE -->
+    <img src="HACKER.png" class="left-image" alt="Hombre con portátil">
+
+    <!-- TEXTO DE BIENVENIDA -->
+    <div>
+        <div class="typing-container">
+            <span id="typing-text"></span>
+            <span class="cursor">|</span>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="buttons">
+            <a href="index.html" class="btn">Planes por Pantalla</a>
+            <a href="arma.html" class="btn">Arma tu Combo</a>
+        </div>
     </div>
 
-    <h2 class="title">NUESTRAS PLATAFORMAS</h2>
-
-    <div class="logos-grid">
-        <div class="logo-card netflix">Netflix</div>
-        <div class="logo-card disney">Disney+</div>
-        <div class="logo-card hbo">HBO Max</div>
-        <div class="logo-card prime">Prime Video</div>
-        <div class="logo-card crunchy">Crunchyroll</div>
-        <div class="logo-card spotify">Spotify</div>
-        <div class="logo-card youtube">YouTube</div>
-        <div class="logo-card iptv">IPTV</div>
-        <div class="logo-card flujo">FlujoTV</div>
-    </div>
-
-    <div class="btns-container">
-        <a href="planes.html" class="btn-main">Ver planes por pantalla</a>
-        <a href="combo.html" class="btn-main">Ver planes por combo</a>
-    </div>
-</section>
+</div>
 
 </body>
 </html>
