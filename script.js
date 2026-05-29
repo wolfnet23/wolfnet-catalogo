@@ -1,3 +1,50 @@
+/* ====== EFECTO TYPING LOOP EN INICIO ====== */
+
+const frases = [
+    "Bienvenidos a WOLFNET",
+    "Proveedor cuentas de Streaming España",
+    "Si buscas acceso Premium a Netflix, Disney, Amazon, HBO Max con 50% de descuento",
+    "Nuestros clientes ahorran hasta 30€ cada mes, únete tú también"
+];
+
+let fraseIndex = 0;
+let charIndex = 0;
+let borrando = false;
+
+const typingElement = document.getElementById("typing-text");
+
+function typingLoop() {
+    if (!typingElement) return;
+
+    const fraseActual = frases[fraseIndex];
+
+    if (!borrando) {
+        // Escribiendo
+        typingElement.textContent = fraseActual.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === fraseActual.length) {
+            borrando = true;
+            setTimeout(typingLoop, 1500); // Pausa al final de la frase
+            return;
+        }
+    } else {
+        // Borrando
+        typingElement.textContent = fraseActual.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            borrando = false;
+            fraseIndex = (fraseIndex + 1) % frases.length;
+        }
+    }
+
+    const velocidad = borrando ? 40 : 70;
+    setTimeout(typingLoop, velocidad);
+}
+
+typingLoop();
+
 /* ====== PANTALLA DE PLANES ====== */
 
 const params = new URLSearchParams(window.location.search);
