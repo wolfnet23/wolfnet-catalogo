@@ -21,19 +21,6 @@ body {
 }
 
 /* ===== FRANJA SUPERIOR ===== */
-.top-bar {
-    width: 100%;
-    height: 80px;
-    background: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 30px;
-}
-
-.logo {
-    height: 60px;
-}
 
 /* ===== CONTENIDO PRINCIPAL ===== */
 .main-container {
