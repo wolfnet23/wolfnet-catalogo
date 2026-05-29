@@ -22,7 +22,7 @@ body {
 
 /* ===== LOGO ===== */
 .logo-central {
-    width: 30%;
+    width: 40%;
     max-width: 800px;
     display: block;
     margin: 80px auto 0 auto; /* <-- aquí lo bajas */
