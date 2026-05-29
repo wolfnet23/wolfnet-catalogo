@@ -50,8 +50,8 @@ body {
 
 /* ===== TEXTO DE BIENVENIDA ===== */
 .welcome-text {
-    font-size: 15px; /* 30% más grande */
-    font-weight: 800; /* más grueso */
+    font-size: 10px; /* 30% más grande */
+    font-weight: 700; /* más grueso */
     color: #ffffff;
     max-width: 700px;
     line-height: 1.4;
