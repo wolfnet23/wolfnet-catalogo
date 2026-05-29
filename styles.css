@@ -36,10 +36,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 40px;
-
-    /* CORRECCIÓN DEL ESPACIO ARRIBA Y ABAJO */
     padding: 0;
-    min-height: calc(100vh - 80px); /* resta la barra superior */
+    min-height: 100vh; /* <-- YA NO RESTAMOS 80px */
 }
 
 /* Imagen del hombre */
