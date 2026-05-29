@@ -25,9 +25,10 @@ body {
     width: 30%;
     max-width: 800px;
     display: block;
-    margin: 0 auto;
+    margin: 60px auto 0 auto; /* <-- aquí lo bajas */
     filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
 }
+
 
 /* ===== CONTENIDO PRINCIPAL ===== */
 .main-container {
