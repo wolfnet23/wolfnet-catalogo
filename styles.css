@@ -1,10 +1,12 @@
 /* ===== FONDO GENERAL ===== */
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background: url('img/fondo-binario.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
+    color: white;
 }
 
 /* Capa oscura para mejorar lectura */
@@ -24,7 +26,7 @@ body {
     height: 80px;
     background: white;
     display: flex;
-    justify-content: flex-start; /* LOGO A LA IZQUIERDA */
+    justify-content: flex-start;
     align-items: center;
     padding-left: 30px;
 }
@@ -38,8 +40,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 40px;
     gap: 40px;
+
+    /* CORRECCIÓN DEL ESPACIO ARRIBA Y ABAJO */
+    padding: 0;
+    min-height: calc(100vh - 80px); /* resta la barra superior */
 }
 
 /* Imagen del hombre */
@@ -50,12 +55,13 @@ body {
 
 /* ===== TEXTO DE BIENVENIDA ===== */
 .welcome-text {
-    font-size: 20px; /* 30% más grande */
-    font-weight: 800; /* más grueso */
+    font-size: 20px;
+    font-weight: 800;
     color: #ffffff;
     max-width: 700px;
     line-height: 1.4;
     text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    margin: 0; /* evita espacio extra */
 }
 
 .green {
@@ -89,6 +95,8 @@ body {
     .main-container {
         flex-direction: column;
         text-align: center;
+        min-height: auto; /* evita problemas en móvil */
+        padding: 40px 20px;
     }
 
     .left-image {
@@ -99,16 +107,8 @@ body {
         font-size: 28px;
     }
 }
-/* ===== CONTENEDOR GENERAL ===== */
-body {
-    background: #0a0a0a;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-/* ===== BOTÓN VOLVER ===== */
+/* ===== BOTÓN VOLVER (OTRA PÁGINA) ===== */
 .header {
     padding: 20px;
 }
