@@ -1,43 +1,70 @@
+/* ===== FONDO GENERAL ===== */
 body {
     margin: 0;
-    background: #000;
-    color: #fff;
     font-family: 'Poppins', sans-serif;
+    background: url('img/fondo-binario.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
 }
 
-/* HEADER */
-.header {
+/* Capa oscura para mejorar lectura */
+.overlay {
+    background: rgba(0,0,0,0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+}
+
+/* ===== FRANJA SUPERIOR ===== */
+.top-bar {
+    width: 100%;
+    height: 80px;
+    background: white;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding: 18px 30px;
-    background: #050505;
-    border-bottom: 1px solid #111;
+    padding-right: 30px;
 }
 
-.logo-img {
+.logo {
     height: 60px;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px 80px;
-    background: radial-gradient(circle at top, #111 0, #000 55%);
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 40px;
 }
 
-/* TYPING */
+/* Imagen del hombre */
+.left-image {
+    width: 40%;
+    max-width: 480px;
+}
+
+/* ===== TEXTO DE BIENVENIDA ===== */
 .typing-container {
-    font-size: 22px;
-    max-width: 900px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    min-height: 80px;
+    font-size: 34px; /* 30% más grande */
+    font-weight: 800; /* más grueso */
+    color: #ffffff;
+    max-width: 700px;
+    line-height: 1.4;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    min-height: 200px;
 }
 
 .cursor {
     display: inline-block;
     margin-left: 4px;
     color: #00ff7f;
+    font-weight: 900;
+    font-size: 36px;
     animation: blink 0.8s infinite;
 }
 
@@ -46,66 +73,40 @@ body {
     51%, 100% { opacity: 0; }
 }
 
-/* TITULO PLATAFORMAS */
-.title {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 25px;
-}
-
-/* GRID PLATAFORMAS */
-.logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    padding: 0 20px 30px;
-}
-
-.logo-card {
-    background: #111;
-    padding: 22px 0;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 700;
-    border: 2px solid #222;
-    transition: 0.2s;
-}
-
-.logo-card:hover {
-    transform: scale(1.05);
-    border-color: #00ff7f;
-}
-
-/* Colores tipo plataformas */
-.netflix { background: #e50914; }
-.disney { background: #113ccf; }
-.hbo { background: #6a00ff; }
-.prime { background: #00a8e1; }
-.crunchy { background: #ff7b00; }
-.spotify { background: #1db954; }
-.youtube { background: #ff0000; }
-.iptv { background: #008f39; }
-.flujo { background: #005eff; }
-
-/* BOTONES PRINCIPALES */
-.btns-container {
-    margin-top: 20px;
+/* ===== BOTONES ===== */
+.buttons {
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
-.btn-main {
+.btn {
     background: #00ff7f;
     padding: 14px 22px;
     border-radius: 10px;
     color: #000;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     text-decoration: none;
     transition: 0.2s;
 }
 
-.btn-main:hover {
+.btn:hover {
     background: #00e676;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-image {
+        width: 70%;
+    }
+
+    .typing-container {
+        font-size: 28px;
+    }
 }
