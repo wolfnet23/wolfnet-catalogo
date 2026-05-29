@@ -20,9 +20,9 @@ body {
     z-index: -1;
 }
 
-/* ===== FRANJA SUPERIOR ===== */
+/* ===== LOGO ===== */
 .logo-central {
-    width: 60%;
+    width: 30%;
     max-width: 800px;
     display: block;
     margin: 0 auto;
