@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arma tu Combo – Wolfnet IPTV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="back">← Volver</a>
+</header>
+
+<h1 class="combo-title">Tu combo actual vale: <span id="total">0€</span></h1>
+
+<div class="grid-combo">
+
+    <div class="combo-card" onclick="toggleServicio('Netflix',6)">
+        Netflix – 6€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('Disney+',4)">
+        Disney+ – 4€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('HBO Max',5)">
+        HBO Max – 5€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('Prime Video',5)">
+        Prime Video – 5€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('Crunchyroll',4)">
+        Crunchyroll – 4€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('IPTV',6)">
+        IPTV – 6€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('FlujoTV',6)">
+        FlujoTV – 6€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('YouTube Premium',3)">
+        YouTube Premium – 3€
+    </div>
+
+    <div class="combo-card" onclick="toggleServicio('Spotify',3)">
+        Spotify – 3€
+    </div>
+
+</div>
+
+<button class="btn-wsp-final" onclick="comprarCombo()">Comprar mi combo</button>
+
+</body>
+</html>
