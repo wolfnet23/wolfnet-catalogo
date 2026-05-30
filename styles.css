@@ -340,21 +340,28 @@ body {
 =========================== */
 
 @media (max-width: 768px) {
+
+    /* Contenedor principal en columna */
     .main-container {
         flex-direction: column;
         text-align: center;
-        padding: 30px 15px;
+        padding: 20px;
     }
 
+    /* Reordenar elementos */
     .logo-central {
+        order: 1;
         width: 200px;
-        margin: 20px auto;
+        margin: 10px auto 20px;
     }
 
     .buttons {
-        flex-direction: row; /* botones uno al lado del otro */
-        justify-content: center;
+        order: 2;
+        display: flex;
+        flex-direction: row;
         gap: 12px;
+        width: 100%;
+        margin: 20px 0;
     }
 
     .btn {
@@ -365,16 +372,24 @@ body {
     }
 
     .welcome-text {
+        order: 3;
         font-size: 20px;
         line-height: 1.6;
-        margin-top: 25px;
+        margin: 10px 15px 20px;
     }
 
     .left-image {
+        order: 4;
         width: 100%;
-        margin-top: 25px;
+        margin-top: 20px;
+    }
+
+    /* Asegurar que right-content no rompa el layout */
+    .right-content {
+        width: 100%;
     }
 }
+
 
 
 
