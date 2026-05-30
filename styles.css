@@ -1,9 +1,50 @@
-/* ===== BOTONES CON ICONO PEQUEÑO Y TEXTO ===== */
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+
+body {
+    background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   CONTENEDOR DE SERVICIOS
+=========================== */
+
+.servicios-container h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===========================
+   BOTONES DE SERVICIO
+=========================== */
 
 .servicio {
     background: linear-gradient(135deg, #00ff7f, #00d46a);
     color: #fff;
-    padding: 14px 18px;
+    padding: 18px;
     border-radius: 14px;
     font-size: 20px;
     font-weight: 700;
@@ -13,7 +54,7 @@
     box-shadow: 0 0 20px rgba(0, 255, 127, 0.4);
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* icono + texto alineados */
+    justify-content: center;
     gap: 12px;
     position: relative;
     overflow: hidden;
@@ -42,10 +83,101 @@
     background: linear-gradient(135deg, #00ff7f, #00e676);
 }
 
-/* Icono pequeño */
+/* Icono dentro del botón */
 .icono-servicio {
     width: 28px;
     height: 28px;
     object-fit: contain;
 }
 
+/* ===========================
+   TABLA DE PLANES
+=========================== */
+
+.tabla-planes {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,255,127,0.3);
+}
+
+.tabla-planes th, 
+.tabla-planes td {
+    padding: 14px;
+    border-bottom: 1px solid #222;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tabla-planes th {
+    background: #00ff7f;
+    color: #000;
+    font-weight: 800;
+}
+
+/* Botón WhatsApp */
+.btn-wsp {
+    background: #00ff7f;
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-wsp:hover {
+    background: #00e676;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .grid-servicios {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 20px;
+    }
+
+    .servicio {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .icono-servicio {
+        width: 24px;
+        height: 24px;
+    }
+
+    .tabla-planes th, 
+    .tabla-planes td {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .servicio {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .icono-servicio {
+        width: 22px;
+        height: 22px;
+    }
+
+    .tabla-planes {
+        width: 95%;
+    }
+}
