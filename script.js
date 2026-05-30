@@ -83,6 +83,16 @@ function actualizarUI() {
     // ============================
     document.getElementById("total").textContent = totalFinal + "€";
 
+    // Cambiar color del total
+    const totalElemento = document.getElementById("total");
+    if (totalFinal > 0) {
+        totalElemento.classList.remove("total-zero");
+        totalElemento.classList.add("total-activo");
+    } else {
+        totalElemento.classList.remove("total-activo");
+        totalElemento.classList.add("total-zero");
+    }
+
     // ============================
     // 6. ILUMINAR TARJETAS
     // ============================
@@ -192,7 +202,6 @@ function mostrarPlanes(servicio) {
                 <td>${p.meses} meses</td>
                 <td>${p.precio}€</td>
                 <td><button class="btn-wsp" onclick="comprar('${servicio}', ${p.precio}, ${p.meses})">Comprar</button></td>
-
             </tr>
         `;
     });
@@ -209,6 +218,3 @@ function comprar(servicio, precio, meses) {
     window.location.href =
         `https://wa.me/${numero}?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20de%20${servicio.toUpperCase()}%20por%20${precio}€`;
 }
-
-
-
