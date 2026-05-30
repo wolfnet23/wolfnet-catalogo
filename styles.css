@@ -499,6 +499,29 @@ body {
         width: 100% !important;
     }
 }
+/* Texto corto oculto por defecto */
+.welcome-text-short {
+    display: none;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+
+    /* Ocultar texto largo */
+    .welcome-text {
+        display: none !important;
+    }
+
+    /* Mostrar texto corto */
+    .welcome-text-short {
+        display: block !important;
+        font-size: 20px !important;
+        line-height: 1.6 !important;
+        margin: 0 15px 10px !important;
+        text-align: center !important;
+    }
+}
+
 
 
 
