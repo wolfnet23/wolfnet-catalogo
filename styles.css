@@ -389,6 +389,53 @@ body {
         width: 100%;
     }
 }
+@media (max-width: 768px) {
+
+    .main-container, 
+    .right-content, 
+    .buttons, 
+    .welcome-text, 
+    .left-image, 
+    .logo-central {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .logo-central {
+        order: 1 !important;
+        width: 200px !important;
+        margin: 10px auto 20px !important;
+    }
+
+    .buttons {
+        order: 2 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    .btn {
+        flex: 1 !important;
+        font-size: 18px !important;
+        padding: 16px !important;
+    }
+
+    .welcome-text {
+        order: 3 !important;
+        font-size: 20px !important;
+        line-height: 1.6 !important;
+        margin: 10px 15px 20px !important;
+    }
+
+    .left-image {
+        order: 4 !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+}
+
 
 
 
