@@ -5,190 +5,65 @@
     <title>Planes – Wolfnet IPTV</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-
-    <style>
-        /* ===== FONDO Y ESTILO GENERAL ===== */
-        body {
-            background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            padding: 20px;
-        }
-
-        .back {
-            color: #00ff7f;
-            font-size: 20px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .servicios-container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .servicios-container h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-top: 10px;
-        }
-
-        /* ===== GRID DE SERVICIOS ===== */
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        /* ===== TARJETAS PREMIUM ===== */
-        .servicio {
-            background: linear-gradient(135deg, #00ff7f, #00d46a);
-            color: #fff;
-            padding: 18px;
-            border-radius: 14px;
-            font-size: 20px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: 0.25s ease;
-            box-shadow: 0 0 20px rgba(0, 255, 127, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .servicio::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-            transform: rotate(25deg);
-            transition: 0.4s;
-        }
-
-        .servicio:hover::before {
-            top: -20%;
-            left: -20%;
-        }
-
-        .servicio:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 25px rgba(0, 255, 127, 0.7);
-            background: linear-gradient(135deg, #00ff7f, #00e676);
-        }
-
-        .icono-servicio {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-        }
-
-        /* ===== TABLA DE PLANES ===== */
-        .tabla-planes {
-            width: 90%;
-            max-width: 600px;
-            margin: 30px auto;
-            border-collapse: collapse;
-            background: #111;
-            color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,255,127,0.3);
-        }
-
-        .tabla-planes th, .tabla-planes td {
-            padding: 14px;
-            border-bottom: 1px solid #222;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        .tabla-planes th {
-            background: #00ff7f;
-            color: #000;
-            font-weight: 800;
-        }
-
-        .btn-wsp {
-            background: #00ff7f;
-            padding: 10px 18px;
-            border-radius: 10px;
-            color: #000;
-            font-size: 16px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .btn-wsp:hover {
-            background: #00e676;
-        }
-    </style>
 </head>
 
 <body>
 
+<div class="overlay"></div>
+
 <header class="header">
-    <a href="index.html" class="back">← Volver</a>
+    <a href="index.html" class="back-btn">← Volver</a>
 </header>
 
-<div class="servicios-container">
-    <h1>Elige tu servicio</h1>
+<h1 class="combo-title">Planes por Servicio</h1>
 
-    <div class="grid-servicios">
+<div class="grid-combo">
 
-        <button class="servicio" onclick="mostrarPlanes('netflix')">
-            <img src="img/netflix.png" class="icono-servicio"> Netflix
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('disney')">
-            <img src="img/disney.png" class="icono-servicio"> Disney+
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('hbo')">
-            <img src="img/hbo.png" class="icono-servicio"> HBO Max
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('prime')">
-            <img src="img/prime.png" class="icono-servicio"> Prime Video
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('crunchy')">
-            <img src="img/crunchy.png" class="icono-servicio"> Crunchyroll
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('iptv')">
-            <img src="img/iptv.png" class="icono-servicio"> IPTV
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('flujo')">
-            <img src="img/flujo.png" class="icono-servicio"> FlujoTV
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('spotify')">
-            <img src="img/spotify.png" class="icono-servicio"> Spotify
-        </button>
-
-        <button class="servicio" onclick="mostrarPlanes('youtube')">
-            <img src="img/youtube.png" class="icono-servicio"> YouTube
-        </button>
-
+    <div class="combo-card" onclick="mostrarPlanes('netflix')">
+        <img src="img/netflix.png" class="combo-icon">
+        <span class="combo-name">Netflix</span>
     </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('disney')">
+        <img src="img/disney.png" class="combo-icon">
+        <span class="combo-name">Disney+</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('hbo')">
+        <img src="img/hbo.png" class="combo-icon">
+        <span class="combo-name">HBO Max</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('prime')">
+        <img src="img/prime.png" class="combo-icon">
+        <span class="combo-name">Prime Video</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('crunchy')">
+        <img src="img/crunchy.png" class="combo-icon">
+        <span class="combo-name">Crunchyroll</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('iptv')">
+        <img src="img/iptv.png" class="combo-icon">
+        <span class="combo-name">IPTV</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('flujo')">
+        <img src="img/flujo.png" class="combo-icon">
+        <span class="combo-name">FlujoTV</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('spotify')">
+        <img src="img/spotify.png" class="combo-icon">
+        <span class="combo-name">Spotify</span>
+    </div>
+
+    <div class="combo-card" onclick="mostrarPlanes('youtube')">
+        <img src="img/youtube.png" class="combo-icon">
+        <span class="combo-name">YouTube Premium</span>
+    </div>
+
 </div>
 
 <div id="planes-container"></div>
@@ -268,9 +143,11 @@ function mostrarPlanes(servicio) {
 }
 
 function comprar(precio, meses) {
-    window.location.href = `https://wa.me/34624063991?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20por%20${precio}€`;
+    window.location.href = 
+        `https://wa.me/34624063991?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20por%20${precio}€`;
 }
 </script>
 
 </body>
 </html>
+
