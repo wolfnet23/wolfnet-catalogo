@@ -80,10 +80,11 @@ h1, h2, h3 {
 .buttons {
     margin-top: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 300px;
+    flex-direction: row; /* AHORA VAN UNO AL LADO DEL OTRO */
+    gap: 20px;
+    justify-content: flex-start;
 }
+
 
 .btn {
     background: #00ff7f;
