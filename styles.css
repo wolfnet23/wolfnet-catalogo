@@ -294,3 +294,46 @@ body {
     opacity: 0.7;
 }
 
+.combo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.55);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0,255,127,0.3);
+}
+
+.combo-total {
+    font-size: 22px;
+    font-weight: 800;
+    color: #00ff7f;
+}
+
+.btn-comprar {
+    background: #00ff7f;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-comprar:hover {
+    background: #00e676;
+    transform: scale(1.05);
+}
+.total-zero {
+    color: #00ff7f; /* verde */
+}
+
+.total-activo {
+    color: #ffffff; /* blanco */
+}
+
+
