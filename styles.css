@@ -263,3 +263,34 @@ body {
         width: 90%;
     }
 }
+/* LAYOUT GENERAL DE PLANES */
+.planes-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* GRID IZQUIERDA 3x3 */
+.planes-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* PANEL DERECHA */
+.planes-detalle {
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,255,127,0.25);
+}
+
+.planes-placeholder {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
