@@ -16,14 +16,8 @@
 
 <h1 class="combo-title">Planes por Servicio</h1>
 
-<!-- ============================
-     LAYOUT IZQUIERDA + DERECHA
-============================= -->
 <div class="planes-layout">
 
-    <!-- ============================
-         COLUMNA IZQUIERDA (3x3)
-    ============================= -->
     <div class="planes-servicios">
 
         <div class="combo-card" onclick="mostrarPlanes('netflix')">
@@ -73,9 +67,6 @@
 
     </div>
 
-    <!-- ============================
-         COLUMNA DERECHA (TABLA)
-    ============================= -->
     <div class="planes-detalle">
         <div id="planes-container" class="planes-box">
             <p class="planes-placeholder">Selecciona un servicio para ver sus planes</p>
@@ -84,9 +75,6 @@
 
 </div>
 
-<!-- ============================
-     SCRIPT COMPLETO AQUÍ MISMO
-============================= -->
 <script>
 const planes = {
     netflix: [
@@ -152,8 +140,7 @@ function mostrarPlanes(servicio) {
             <tr>
                 <td>${p.meses} meses</td>
                 <td>${p.precio}€</td>
-                <td><button class="btn-wsp" onclick="comprar('${servicio}', ${p.precio}, ${p.meses})">Comprar</button></td>
-
+                <td><button class="btn-wsp" onclick="comprar('${servicio}', ${p.meses}, ${p.precio})">Comprar</button></td>
             </tr>
         `;
     });
@@ -162,9 +149,11 @@ function mostrarPlanes(servicio) {
     contenedor.innerHTML = html;
 }
 
-function comprar(precio, meses) {
-    window.location.href = 
-        `https://wa.me/34624063991?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20por%20${precio}€`;
+function comprar(servicio, meses, precio) {
+    const numero = "34624063991";
+
+    window.location.href =
+        `https://wa.me/${numero}?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20de%20${servicio.toUpperCase()}%20por%20${precio}€`;
 }
 </script>
 
