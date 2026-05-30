@@ -521,6 +521,25 @@ body {
         text-align: center !important;
     }
 }
+@media (max-width: 768px) {
+
+    /* Texto más abajo */
+    .welcome-text-short {
+        margin-top: 25px !important;   /* antes estaba más pegado */
+        margin-bottom: 15px !important;
+    }
+
+    /* Botones 10% más pequeños */
+    .buttons {
+        gap: 10px !important;
+    }
+
+    .btn {
+        font-size: 16px !important;   /* antes 18px → 10% menos */
+        padding: 14px !important;     /* antes 16px */
+    }
+}
+
 
 
 
