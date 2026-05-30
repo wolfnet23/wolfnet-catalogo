@@ -335,5 +335,46 @@ body {
 .total-activo {
     color: #ffffff; /* blanco */
 }
+/* ===========================
+   VERSIÓN MÓVIL INDEX (WOLFNET)
+=========================== */
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .logo-central {
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .buttons {
+        flex-direction: row; /* botones uno al lado del otro */
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn {
+        flex: 1;
+        font-size: 18px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-top: 25px;
+    }
+
+    .left-image {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
 
 
