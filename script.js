@@ -30,14 +30,15 @@ function actualizarUI() {
 
     // Cambiar color de tarjetas seleccionadas
     document.querySelectorAll(".combo-card").forEach(card => {
-        const texto = card.textContent.trim();
-        const nombre = texto.split("–")[0].trim();
+        const nombre = card.querySelector(".combo-name").textContent.trim();
 
         const seleccionado = serviciosSeleccionados.some(s => s.nombre === nombre);
 
-        card.style.background = seleccionado ? "#00ff7f" : "#ffffff";
-        card.style.color = "#000000";
-        card.style.fontWeight = seleccionado ? "800" : "600";
+        if (seleccionado) {
+            card.classList.add("selected");
+        } else {
+            card.classList.remove("selected");
+        }
     });
 }
 
