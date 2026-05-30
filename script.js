@@ -209,3 +209,4 @@ function comprar(servicio, precio, meses) {
         `https://wa.me/${numero}?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20de%20${servicio.toUpperCase()}%20por%20${precio}€`;
 }
 
+
