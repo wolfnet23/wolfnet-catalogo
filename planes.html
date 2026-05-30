@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Planes – Wolfnet IPTV</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,57 +16,77 @@
 
 <h1 class="combo-title">Planes por Servicio</h1>
 
-<div class="grid-combo">
+<!-- ============================
+     LAYOUT IZQUIERDA + DERECHA
+============================= -->
+<div class="planes-layout">
 
-    <div class="combo-card" onclick="mostrarPlanes('netflix')">
-        <img src="img/netflix.png" class="combo-icon">
-        <span class="combo-name">Netflix</span>
+    <!-- ============================
+         COLUMNA IZQUIERDA (3x3)
+    ============================= -->
+    <div class="planes-servicios">
+
+        <div class="combo-card" onclick="mostrarPlanes('netflix')">
+            <img src="img/netflix.png" class="combo-icon">
+            <span class="combo-name">Netflix</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('disney')">
+            <img src="img/disney.png" class="combo-icon">
+            <span class="combo-name">Disney+</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('hbo')">
+            <img src="img/hbo.png" class="combo-icon">
+            <span class="combo-name">HBO Max</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('prime')">
+            <img src="img/prime.png" class="combo-icon">
+            <span class="combo-name">Prime Video</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('crunchy')">
+            <img src="img/crunchy.png" class="combo-icon">
+            <span class="combo-name">Crunchyroll</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('iptv')">
+            <img src="img/iptv.png" class="combo-icon">
+            <span class="combo-name">IPTV</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('flujo')">
+            <img src="img/flujo.png" class="combo-icon">
+            <span class="combo-name">FlujoTV</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('spotify')">
+            <img src="img/spotify.png" class="combo-icon">
+            <span class="combo-name">Spotify</span>
+        </div>
+
+        <div class="combo-card" onclick="mostrarPlanes('youtube')">
+            <img src="img/youtube.png" class="combo-icon">
+            <span class="combo-name">YouTube Premium</span>
+        </div>
+
     </div>
 
-    <div class="combo-card" onclick="mostrarPlanes('disney')">
-        <img src="img/disney.png" class="combo-icon">
-        <span class="combo-name">Disney+</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('hbo')">
-        <img src="img/hbo.png" class="combo-icon">
-        <span class="combo-name">HBO Max</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('prime')">
-        <img src="img/prime.png" class="combo-icon">
-        <span class="combo-name">Prime Video</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('crunchy')">
-        <img src="img/crunchy.png" class="combo-icon">
-        <span class="combo-name">Crunchyroll</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('iptv')">
-        <img src="img/iptv.png" class="combo-icon">
-        <span class="combo-name">IPTV</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('flujo')">
-        <img src="img/flujo.png" class="combo-icon">
-        <span class="combo-name">FlujoTV</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('spotify')">
-        <img src="img/spotify.png" class="combo-icon">
-        <span class="combo-name">Spotify</span>
-    </div>
-
-    <div class="combo-card" onclick="mostrarPlanes('youtube')">
-        <img src="img/youtube.png" class="combo-icon">
-        <span class="combo-name">YouTube Premium</span>
+    <!-- ============================
+         COLUMNA DERECHA (TABLA)
+    ============================= -->
+    <div class="planes-detalle">
+        <div id="planes-container" class="planes-box">
+            <p class="planes-placeholder">Selecciona un servicio para ver sus planes</p>
+        </div>
     </div>
 
 </div>
 
-<div id="planes-container"></div>
-
+<!-- ============================
+     SCRIPT COMPLETO AQUÍ MISMO
+============================= -->
 <script>
 const planes = {
     netflix: [
@@ -150,4 +169,3 @@ function comprar(precio, meses) {
 
 </body>
 </html>
-
