@@ -152,7 +152,8 @@ function mostrarPlanes(servicio) {
             <tr>
                 <td>${p.meses} meses</td>
                 <td>${p.precio}€</td>
-                <td><button class="btn-wsp" onclick="comprar(${p.precio}, ${p.meses})">Comprar</button></td>
+                <td><button class="btn-wsp" onclick="comprar('${servicio}', ${p.precio}, ${p.meses})">Comprar</button></td>
+
             </tr>
         `;
     });
