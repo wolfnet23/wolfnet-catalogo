@@ -83,7 +83,6 @@ function actualizarUI() {
     // ============================
     document.getElementById("total").textContent = totalFinal + "€";
 
-    // Cambiar color del total
     const totalElemento = document.getElementById("total");
     if (totalFinal > 0) {
         totalElemento.classList.remove("total-zero");
@@ -211,10 +210,29 @@ function mostrarPlanes(servicio) {
 }
 
 
-// ===== COMPRAR PLAN INDIVIDUAL =====
+
+// =======================================
+// ===== FUNCIÓN COMPRAR PROFESIONAL =====
+// =======================================
+
 function comprar(servicio, precio, meses) {
     const numero = "34624063991";
 
-    window.location.href =
-        `https://wa.me/${numero}?text=Hola,%20quiero%20comprar%20el%20plan%20de%20${meses}%20mes(es)%20de%20${servicio.toUpperCase()}%20por%20${precio}€`;
+    const mensaje = 
+`Plan seleccionado: ${servicio.toUpperCase()} – ${meses} mes(es) – ${precio}€
+Métodos de pago disponibles:
+
+💳 Bizum:
+• 624 06 39 91
+• 624 74 89 28
+
+🏦 Transferencia bancaria:
+• IBAN: ES03 6893 0001 7000 0015 4710
+• Titular: Wolffan Jiménez
+• Concepto permitido: amigo, salida, café o merienda (elige solo uno)
+
+📸 Envíame la captura del pago y te activo tu cuenta en menos de 5 minutos.`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
 }
