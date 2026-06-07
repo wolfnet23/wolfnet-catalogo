@@ -155,14 +155,14 @@ function mostrarPlanes(servicio) {
 
 
 // =======================================
-// ===== FUNCIÓN COMPRAR PROFESIONAL =====
+// ===== FUNCIÓN COMPRAR CON API =========
 // =======================================
 
 function comprar(servicio, meses, precio) {
     const numero = "34624063991";
 
     const mensaje = 
-`Plan seleccionado: ${servicio.toUpperCase()} – ${meses} mes(es) – ${precio}€
+`📦 Plan seleccionado: ${servicio.toUpperCase()} – ${meses} mes(es) – ${precio}€
 Métodos de pago disponibles:
 
 💳 Bizum:
@@ -174,9 +174,9 @@ Métodos de pago disponibles:
 • Titular: Wolffan Jiménez
 • Concepto permitido: amigo, salida, café o merienda (elige solo uno)
 
-📸 Envíame la captura del pago y te activo tu cuenta en menos de 5 minutos.`;
+📸 Envíame la captura del pago y 🟢 te activo tu cuenta en menos de 5 minutos.`;
 
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 }
 </script>
