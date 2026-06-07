@@ -135,7 +135,7 @@ ${lista}
 • Titular: Wolffan Jiménez
 • Concepto permitido: amigo, salida, café o merienda
 
-📸 Envíame la captura del pago y 🟢 activo tu combo en menos de 5 minutos.`;
+📸 *Envíame la captura del pago* y 🤝 activo tu combo en menos de 5 minutos.`;
 
     const numero = "34624063991";
     const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
@@ -245,7 +245,7 @@ Métodos de pago disponibles:
 • Titular: Wolffan Jiménez
 • Concepto permitido: amigo, salida, café o merienda
 
-📸 Envíame la captura del pago y 🤝 activo tu cuenta en menos de 5 minutos.`;
+📸 *Envíame la captura del pago* y 🤝 activo tu cuenta en menos de 5 minutos.`;
 
     const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
