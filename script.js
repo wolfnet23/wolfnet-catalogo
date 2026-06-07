@@ -225,34 +225,5 @@ function mostrarPlanes(servicio) {
 
 
 
-// =======================================
-// ===== FUNCIÓN COMPRAR PLAN INDIVIDUAL ==
-// =======================================
 
-function comprar(servicio, precio, meses) {
-    const numero = "34624063991";
-
-    const mensaje = 
-`📦 *Servicio seleccionado*
-• ${servicio.toUpperCase()}
-
-⌛ *Tiempo*
-• ${meses} mes(es)
-
-💰 *Total:* ${precio}€
-
-💳 *Bizum:*
-• 624 06 39 91
-• 624 74 89 28
-
-🏦 *Transferencia bancaria:*
-• IBAN: ES03 6893 0001 7000 0015 4710
-• Titular: Wolffan Jiménez
-• Concepto permitido: amigo, salida, café o merienda
-
-📸 *Envíame la captura del pago* y 🤝 activo tu cuenta en menos de 5 minutos.`;
-
-    const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-}
 
