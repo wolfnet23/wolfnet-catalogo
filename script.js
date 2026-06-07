@@ -107,7 +107,7 @@ function actualizarUI() {
     });
 }
 
-// ===== ENVIAR COMBO A WHATSAPP =====
+// ===== ENVIAR COMBO A WHATSAPP (API OFICIAL) =====
 function comprarCombo() {
     if (serviciosSeleccionados.length === 0) {
         alert("Debes seleccionar al menos un servicio.");
@@ -116,16 +116,30 @@ function comprarCombo() {
 
     const lista = serviciosSeleccionados
         .map(s => `• ${s.nombre}`)
-        .join("%0A");
+        .join("\n");
 
     const total = document.getElementById("total").textContent;
 
-    const mensaje = 
-        `Hola, quiero comprar este combo:%0A%0A${lista}%0A%0ATotal: ${total}`;
+    const mensaje =
+`📦 *Combo seleccionado*
+${lista}
+
+💰 *Total:* ${total}
+
+💳 *Bizum:*
+• 624 06 39 91
+• 624 74 89 28
+
+🏦 *Transferencia bancaria:*
+• IBAN: ES03 6893 0001 7000 0015 4710
+• Titular: Wolffan Jiménez
+• Concepto permitido: amigo, salida, café o merienda
+
+📸 Envíame la captura del pago y 🟢 activo tu combo en menos de 5 minutos.`;
 
     const numero = "34624063991";
-
-    window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+    const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
 }
 
 
@@ -212,27 +226,27 @@ function mostrarPlanes(servicio) {
 
 
 // =======================================
-// ===== FUNCIÓN COMPRAR PROFESIONAL =====
+// ===== FUNCIÓN COMPRAR PLAN INDIVIDUAL ==
 // =======================================
 
 function comprar(servicio, precio, meses) {
     const numero = "34624063991";
 
     const mensaje = 
-`Plan seleccionado: ${servicio.toUpperCase()} – ${meses} mes(es) – ${precio}€
+`📦 *Plan seleccionado: ${servicio.toUpperCase()} – ${meses} mes(es) – ${precio}€*
 Métodos de pago disponibles:
 
-💳 Bizum:
+📲 Bizum:
 • 624 06 39 91
 • 624 74 89 28
 
 🏦 Transferencia bancaria:
 • IBAN: ES03 6893 0001 7000 0015 4710
 • Titular: Wolffan Jiménez
-• Concepto permitido: amigo, salida, café o merienda (elige solo uno)
+• Concepto permitido: amigo, salida, café o merienda
 
-📸 Envíame la captura del pago y te activo tu cuenta en menos de 5 minutos.`;
+📸 Envíame la captura del pago y 🤝 activo tu cuenta en menos de 5 minutos.`;
 
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 }
